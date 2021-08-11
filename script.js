@@ -72,3 +72,18 @@ function detectPersonalLevel() {
 }
 
 detectPersonalLevel();
+
+
+
+function showMyDB(hidden) {
+    
+    /*hidden - скрытый. Имеется в виду что, если база данных не скрытая (не приватная/публичная), то она выводится в консоль.
+    Агрументу hidden передается значение personalMovieDB.privat. !hidden == true, так как значение самого personalMovieDB.privat == false,
+    поэтому такая условная конструкция работает.*/
+
+    if (!hidden) {
+        console.log(personalMovieDB);
+    }
+}
+
+showMyDB(personalMovieDB.privat);
